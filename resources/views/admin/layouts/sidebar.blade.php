@@ -7,19 +7,21 @@
         <a href="index.html">RM</a>
       </div>
       <ul class="sidebar-menu">
-        <li class="menu-header">Dashboard</li>
+        {{-- <li class="menu-header">Ordini</li> --}}
         <li class="dropdown">
-          <a href="#" class="nav-link has-dropdown "><i class="fas fa-fire"></i><span>Dashboard</span></a>
+          <a href="#" class="nav-link has-dropdown "><i class="fas fa-fire"></i><span>Ordini</span></a>
           <ul class="dropdown-menu">
-            <li class=active><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-            <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+            <li ><a class="nav-link" href="index-0.html">Lista Ordini</a></li>
+            <li><a class="nav-link" href="index.html">Dashboard ordini</a></li>
           </ul>
         </li>
-        <li class="menu-header">Starter</li>
+        <div class="dropdown-divider"></div>
         <li class="dropdown">
-         
+          <a href="#" class="nav-link has-dropdown "><i class="fas fa-fire"></i><span>Menu</span></a>
+          <ul class="dropdown-menu">
+            <li ><a class="nav-link" href="index-0.html">Categorie</a></li>
+            <li><a class="nav-link" href="index.html">Piatti</a></li>
+            <li><a class="nav-link" href="index.html">Disponibilita'</a></li>
+          </ul>
         </li>
-       
-        
-        </aside>
   </div>

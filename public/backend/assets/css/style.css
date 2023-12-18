@@ -2322,9 +2322,11 @@ pre {
   top: 0;
   height: 100%;
   width: 250px;
-  background-color: #fff;
+  background-color: rgb(153, 183, 132);
   z-index: 880;
-  left: 0; }
+  left: 0;
+  /* border-radius: 0px;  */
+}
 
 .main-sidebar,
 .navbar,
@@ -2587,7 +2589,7 @@ body.layout-3 .main-footer {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
-    color: #000; }
+    color:green; }
 .main-sidebar .sidebar-user {
   display: inline-block;
   width: 100%;
@@ -2606,7 +2608,7 @@ body.layout-3 .main-footer {
     display: block; }
     .main-sidebar .sidebar-menu li.menu-header {
       padding: 3px 15px;
-      color: #bcc1c6;
+      color:green;
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 1.3px;
@@ -2621,7 +2623,7 @@ body.layout-3 .main-footer {
       padding: 0 20px;
       width: 100%;
       letter-spacing: .3px;
-      color: #868e96;
+      color: red;
       text-decoration: none; }
       .main-sidebar .sidebar-menu li a .badge {
         float: right;
@@ -2635,7 +2637,7 @@ body.layout-3 .main-footer {
         margin-top: 3px;
         width: 100%; }
       .main-sidebar .sidebar-menu li a:hover {
-        background-color: #fcfcfd; }
+        background-color: green; }
     .main-sidebar .sidebar-menu li.active a {
       color: #6777ef;
       font-weight: 600;
