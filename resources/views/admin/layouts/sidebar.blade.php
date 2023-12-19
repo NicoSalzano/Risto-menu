@@ -15,7 +15,7 @@
             <li><a class="nav-link" href="index.html">Dashboard ordini</a></li>
           </ul>
         </li>
-        <div class="dropdown-divider"></div>
+        {{-- <div class="dropdown-divider"></div> --}}
         <li class="dropdown">
           <a href="#" class="nav-link has-dropdown "><i class="fas fa-fire"></i><span>Menu</span></a>
           <ul class="dropdown-menu">
