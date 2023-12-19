@@ -65,7 +65,8 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = Category::findOrFail($id);
+        return view('admin.Category.edit',compact('category'));
     }
 
     /**
@@ -73,7 +74,26 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // dd($request->all());
+        $messages = [
+            'name.required' => 'Il nome della categoria è richiesto',
+            'name.max'=>'Il nome della categoria deve essere max 50 caratteri',
+            'name.unique' => 'Questa categoria è stata già creata',
+            'status.required' => 'Il campo status è richiesto',
+        ];
+        // dd($request->all());
+        $request->validate([
+            'name' => ['required', 'max:50', 'unique:categories,name'],
+            'status'=> 'required'
+        ],$messages);
+
+        $category = Category::findOrFail($id)->update([
+            'name' => $request->name,
+            'status' => $request->status,
+            'slug' => $request->Str::slug($request->name)
+        ]);
+
+        return to_route('admin.category.index')->with('message', 'La categoria è stata modificata.');
     }
 
     /**
@@ -83,4 +103,15 @@ class CategoryController extends Controller
     {
         //
     }
+
+    public function changeStatus(Request $request)
+    {
+        $category = Category::findOrFail($request->id);
+        $category->status = $request->status == 'true'? 1 : 0;
+        $category->save();
+
+        return response(['message' => 'Stato modificato']);
+    }
+    
+   
 }
