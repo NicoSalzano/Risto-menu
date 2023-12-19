@@ -24,4 +24,6 @@
             <li><a class="nav-link" href="index.html">Disponibilita'</a></li>
           </ul>
         </li>
-  </div>
+      </ul>
+    </aside>
+</div>
