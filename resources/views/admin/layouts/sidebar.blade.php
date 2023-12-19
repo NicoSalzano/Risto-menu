@@ -19,7 +19,7 @@
         <li class="dropdown">
           <a href="#" class="nav-link has-dropdown "><i class="fas fa-fire"></i><span>Menu</span></a>
           <ul class="dropdown-menu">
-            <li ><a class="nav-link" href="index-0.html">Categorie</a></li>
+            <li ><a class="nav-link" href="{{route('admin.category.index')}}">Categorie</a></li>
             <li><a class="nav-link" href="index.html">Piatti</a></li>
             <li><a class="nav-link" href="index.html">Disponibilita'</a></li>
           </ul>
