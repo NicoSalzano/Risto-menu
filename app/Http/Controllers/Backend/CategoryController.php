@@ -101,7 +101,8 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $category = Category::findOrFail($id)->delete();
+        return response(['status'=> 'success','message' => 'La categoria è stata eliminata.']);
     }
 
     public function changeStatus(Request $request)
