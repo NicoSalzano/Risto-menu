@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\AllergenController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProfileController;
 
@@ -14,5 +15,9 @@ Route::post('profile/update/password', [ProfileController::class, 'updateProfile
 
 
 // routes category
-Route::put('change-status',[CategoryController::class, 'changeStatus'])->name('category.change-status');
+Route::put('modifica-stato',[CategoryController::class, 'changeStatus'])->name('category.change-status');
 Route::resource('category', CategoryController::class);
+
+// routes allergen
+// Route::put('modifica-stato',[AllergenController::class, 'changeStatus'])->name('allergen.change-status');
+Route::resource('allergeni', AllergenController::class);

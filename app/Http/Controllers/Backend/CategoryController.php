@@ -90,7 +90,7 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id)->update([
             'name' => $request->name,
             'status' => $request->status,
-            'slug' => $request->Str::slug($request->name)
+            'slug' =>  Str::slug($request->name)
         ]);
 
         return to_route('admin.category.index')->with('message', 'La categoria è stata modificata.');

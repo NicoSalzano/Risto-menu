@@ -21,7 +21,7 @@
           <ul class="dropdown-menu">
             <li ><a class="nav-link" href="{{route('admin.category.index')}}">Categorie</a></li>
             <li><a class="nav-link" href="index.html">Piatti</a></li>
-            <li><a class="nav-link" href="index.html">Allergeni</a></li>
+            <li><a class="nav-link" href="{{route('admin.allergeni.index')}}">Allergeni</a></li>
           </ul>
         </li>
       </ul>
