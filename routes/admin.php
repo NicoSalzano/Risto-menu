@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\AllergenController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\PlateController;
 use App\Http\Controllers\Backend\ProfileController;
 
 Route::get('dashboard',[AdminController::class, 'dashboard'])->name('dashboard');
@@ -21,3 +22,6 @@ Route::resource('category', CategoryController::class);
 // routes allergen
 // Route::put('modifica-stato',[AllergenController::class, 'changeStatus'])->name('allergen.change-status');
 Route::resource('allergeni', AllergenController::class);
+
+// route plates
+Route::resource('piatti', PlateController::class);

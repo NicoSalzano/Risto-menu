@@ -9,4 +9,7 @@ class Allergen extends Model
 {
     use HasFactory;
     protected $fillable = ['name','slug'];
+    // public function plates() {
+    //     return $this->belongsToMany(Plate::class);
+    // }
 }
