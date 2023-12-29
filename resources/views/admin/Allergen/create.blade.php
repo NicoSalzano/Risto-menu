@@ -19,6 +19,7 @@
               <div class="card">
                 <div class="card-header">
                   <h4>Aggiungi allergene</h4>
+                  {{-- <p>Modificare button aggiungi riga e metterlo vicino all input</p> --}}
                   @if ($errors->any())
                           @foreach ($errors->all() as $error )
                               <div class="alert alert-danger mt-2">{{$error}}</div>
@@ -32,11 +33,16 @@
                 <div class="card-body col-md-6">
                     <form action="{{route('admin.allergeni.store')}}" method="POST" >
                       @csrf
+                      <div id="rows-container">
                         <div class="form-group">
                             <label>Nome</label>
-                            <input type="text" class="form-control" value="{{old('name')}}" name="name">
+                            <input type="text" class="form-control" value="{{old('name')}}" name="name[]"> 
                         </div>
+                      </div>
+                      <div class="text-right">
+                        <button type="button" onclick="addRow()" class="btn btn-info">Aggiungi riga</button>
                         <button type="submit" class="btn btn-success">Aggiungi</button>
+                      </div>
                     </form>
                 </div>    
               </div>
@@ -44,4 +50,18 @@
           </div>
         </div>
       </section>
+      <script>
+        function addRow() {
+          let newRow = `<div class="form-group">
+                          <label>Nome</label>
+                          <input type="text" class="form-control" value="{{old('name')}}" name="name[]">
+                          <button type="button" onclick="rmvRow(this)"  class="btn btn-danger">Rimuovi riga</button>
+                      </div>`;
+                      $(`#rows-container`).append(newRow);
+        }
+
+        function rmvRow(button) {
+          $(button).closest('.form-group').remove();
+        }
+      </script>
 @endsection

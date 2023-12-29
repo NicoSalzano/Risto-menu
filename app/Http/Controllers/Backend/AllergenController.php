@@ -38,14 +38,17 @@ class AllergenController extends Controller
             
         ];
         // dd($request->all());
-        $request->validate([
-            'name' => ['required', 'max:50', 'unique:allergens,name'],
+        $allergen = $request->validate([
+            'name.*' => ['required', 'max:50', 'unique:allergens,name'],
         ],$messages);
 
-        $allergen = Allergen::create([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name)
-        ]);
+        foreach($allergen['name'] as $name){
+            $slug =  Str::slug($name);
+            Allergen::create([
+                'name'=>$name,
+                'slug'=>$slug,
+            ]);
+        }
         return to_route('admin.allergeni.index')->with('message','L allergene è stato inserito.');
     }
 
