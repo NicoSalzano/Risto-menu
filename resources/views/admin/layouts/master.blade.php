@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="{{asset('backend/assets/modules/summernote/summernote-bs4.css')}}">
   <link rel="stylesheet" href="{{asset('backend/assets/modules/jquery-selectric/selectric.css')}}">
   {{-- icone --}}
-  {{-- <link rel="stylesheet" href="assets/modules/ionicons/css/ionicons.min.css"> --}}
+  <link rel="stylesheet" href="{{asset('backend/assets/modules/ionicons/css/ionicons.min.css')}}">
 
 
   {{-- link per lo style del dataTable --}}
@@ -78,7 +78,7 @@
     <script src="{{asset('backend/assets/modules/chocolat/dist/js/jquery.chocolat.min.js')}}"></script>
     <script src="{{asset('backend/assets/modules/jquery-selectric/jquery.selectric.min.js')}}"></script>
     {{-- icone --}}
-    {{-- <script src="assets/js/page/modules-ion-icons.js"></script> --}}
+    <script src="{{asset('beckend/assets/js/page/modules-ion-icons.js')}}"></script>
 
     {{-- script per il dataTable --}}
     <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
