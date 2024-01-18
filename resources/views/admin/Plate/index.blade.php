@@ -23,6 +23,8 @@
             </div>
             <div class="card-body">
               {{ $dataTable->table() }}
+              <p><code>*Nascondi il piatto al cliente</code></p> 
+              <p><code>**Il cliente vede il piatto ma non e disponibile</code></p>
             </div>    
           </div>
         </div>
@@ -32,4 +34,32 @@
   @endsection
   @push('scripts')
     {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
+    <script>
+      $(document).ready(function(){
+        $('body').on('click', '.change-status', function(){
+          let isChecked = $(this).is(':checked');
+            // console.log(isChecked);
+            let id = $(this).data('id');
+            console.log(id);
+
+            $.ajax({
+                url:"{{route('admin.plates.change-status')}}",
+                method:'PUT',
+                headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+                data: {
+                    status: isChecked,
+                    id:id
+                },
+                success:function(data){
+                    console.log(data);
+                },
+                error:function(xhr, status, error){
+                    console.log(error);
+                },
+            })
+        })
+      })
+    </script>
 @endpush

@@ -20,8 +20,8 @@ Route::put('modifica-stato',[CategoryController::class, 'changeStatus'])->name('
 Route::resource('category', CategoryController::class);
 
 // routes allergen
-// Route::put('modifica-stato',[AllergenController::class, 'changeStatus'])->name('allergen.change-status');
 Route::resource('allergeni', AllergenController::class);
 
 // route plates
+Route::put('piatti/modifica-stato',[PlateController::class, 'changeStatus'])->name('plates.change-status');
 Route::resource('piatti', PlateController::class);

@@ -2833,7 +2833,9 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
 /* switch per il campo status */
 .custom-switch-input:checked ~ .custom-switch-indicator {
   background: green;
+  border-color:green;
 }
 .custom-switch-indicator{
   background: red;
+  border-color:red ;
 }

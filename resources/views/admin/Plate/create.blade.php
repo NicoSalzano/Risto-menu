@@ -25,7 +25,7 @@
                           @endforeach
                   @endif  
                   <div class="card-header-action">
-                      <a href="{{route('admin.category.index')}}" class="btn btn-primary">Index menu</a>
+                      <a href="{{route('admin.piatti.index')}}" class="btn btn-primary">Index menu</a>
                   </div>
                 </div>
                 {{-- togliere il col-md-6 per avere il full width --}}
@@ -61,7 +61,7 @@
                         
                         <div class="row">
                             <div class="col-md-4">
-                                <label for="inputState">Status</label>
+                                <label for="inputState">Status *</label>
                                 <select id="inputState" class="form-control" name="status">
                                     <option>Seleziona</option>
                                     <option value="1">Visibile</option>
@@ -69,7 +69,7 @@
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label for="inputState">Disponibilita</label>
+                                <label for="inputState">Disponibilita**</label>
                                 <select id="inputState" class="form-control" name="not_available">
                                     <option>Seleziona</option>
                                     <option value="1">Disponibile</option>
@@ -110,10 +110,12 @@
                               <button type="submit" class="btn btn-success">Aggiungi</button>
                           </div>
                     </form>
+                    <p><code>* Nascondi il piatto al cliente</code></p>
+                    <p><code>** Il cliente vede il piatto ma non e disponibile</code></p>
                 </div>    
               </div>
             </div>
           </div>
         </div>
-      </section>
+    </section>
 @endsection

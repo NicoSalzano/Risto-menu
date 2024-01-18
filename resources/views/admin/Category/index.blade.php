@@ -58,22 +58,6 @@
                     console.log(error);
                 },
             })
-          //   let id = $(this).data('id');
-  
-        //   $.ajax({
-        //     url: "{{route('admin.category.change-status')}}",
-        //     method:'PUT',
-        //     data: {
-        //       status: isChecked,
-        //       id:id
-        //     },
-        //     success: function(data){
-        //         console.log(data.message)
-        //     },
-        //     error: function(xhr, status, error){
-        //       console.log(error);
-        //     }
-        //   })
         })
       })
     </script>

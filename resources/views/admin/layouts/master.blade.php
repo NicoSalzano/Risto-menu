@@ -109,8 +109,8 @@
         let deleteUrl = $(this).attr('href');
         
         Swal.fire({
-          title: "Cancellare la categoria?",
-          text: "La categoria non potra piu essere recuperata!",
+          title: "Cancellare l'elemento selezionato?",
+          text: "L' elemento non potra piu essere recuperato!",
           icon: "warning",
           showCancelButton: true,
           confirmButtonColor: "#3085d6",
