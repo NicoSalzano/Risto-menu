@@ -3,7 +3,7 @@
 @section('content')
 <section class="section">
     <div class="section-header">
-        <h1>Menu</h1>
+        <h1>Menu PAGINA DA MODIFICARE</h1>
     </div>
     <div class="section-body">
         <div class="row">
@@ -27,9 +27,11 @@
                           <h5 class="card-title">Nome:{{$plates->name}}</h5>
                           <p class="card-text">Descrizione: {{$plates->description}}</p>
                           <p class="card-text">Prezzo: <small class="text-body-secondary">{{$plates->price}}</small></p>
-                          <p class="card-text">Prezzo: <small class="text-body-secondary">{{$plates->price}}</small></p>
-                          <p class="card-text">Prezzo: <small class="text-body-secondary">{{$plates->price}}</small></p>
-                          <p class="card-text">Prezzo: <small class="text-body-secondary">{{$plates->price}}</small></p>
+                          <p class="card-text">Stato: <small class="text-body-secondary">{{$plates->status}}</small></p>
+                          <p class="card-text">Disponibilita: <small class="text-body-secondary">{{$plates->not_available}}</small></p>
+                          <p class="card-text">In evidenza: <small class="text-body-secondary">{{$plates->featured}}</small></p>
+                          <p class="card-text">Etichetta: <small class="text-body-secondary">{{$plates->plate_label}}</small></p>
+                          <p class="card-text">Allergeni: <small class="text-body-secondary">Qui tutti gli allergeni</small></p>
                         </div>
                       </div>
                     </div>

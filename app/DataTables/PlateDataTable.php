@@ -57,8 +57,11 @@ class PlateDataTable extends DataTable
             
           return $button;
         })
+        ->addColumn('name', function($query){
+            return  $query->name;
+        })
 
-        ->rawColumns(['Img','action','not_available','status'])
+        ->rawColumns(['Img','action','not_available','status','name'])
         ->setRowId('id');
     }
 
@@ -99,7 +102,7 @@ class PlateDataTable extends DataTable
     {
         return [
             
-            Column::make('id'),
+            // Column::make('id'),
             Column::make('Img')->width(100),
             Column::make('name')->title('Nome'),
             Column::make('category.name')->title('Categoria'),
