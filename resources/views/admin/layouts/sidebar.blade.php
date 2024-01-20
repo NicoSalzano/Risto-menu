@@ -9,6 +9,12 @@
       <ul class="sidebar-menu">
         {{-- <li class="menu-header">Ordini</li> --}}
         <li class="dropdown">
+          <a href="#" class="nav-link has-dropdown "><i class="fas fa-fire"></i><span>Sito</span></a>
+          <ul class="dropdown-menu">
+            <li ><a class="nav-link" href="{{route('home')}}">HomePage</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
           <a href="#" class="nav-link has-dropdown "><i class="fas fa-fire"></i><span>Ordini</span></a>
           <ul class="dropdown-menu">
             <li ><a class="nav-link" href="index-0.html">Lista Ordini</a></li>
